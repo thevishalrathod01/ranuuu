@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Janhavi ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------------- GENERAL ---------------- */
+:root {
+  --bg: #120015;
+  --card: rgba(255, 255, 255, 0.08);
+  --accent: #ff6fa5;
+}
+.tag {
+    color: #ff0000;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: radial-gradient(circle at top, #3f003f 0%, #120015 60%, #09000f 100%);
+  overflow-x: hidden;
+}
+
+/* ---------------- CONTAINER ---------------- */
+.container {
+  width: min(1000px, 92%);
+  margin: auto;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: #e35e91;
+}
+.helper-text {
+    margin-top: 0;
+    color: #e0cf87;
+    font-size: 0.95rem;
+}
+
+/* ---------------- GALLERY ---------------- */
+.gallery {
+  margin-top: 2rem;
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 1rem;
+}
+
+.memory-card {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+  transform: scale(1.05);
+}
+
+.memory-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* ---------------- LETTER ---------------- */
+.letter {
+  margin-top: 2rem;
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  line-height: 1.8;
+}
+
+/* ---------------- HEART BACKGROUND ---------------- */
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  color: rgba(255, 166, 200, 0.7);
+  animation: float-up linear forwards;
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ---------------- MODAL ---------------- */
+.note-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+}
+
+.note-modal.show {
+  display: flex;
+}
+
+/* ✨ Soft Glow Effect */
+.note-card {
+  background: linear-gradient(135deg, #ff8ab8, #e77dd8);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 380px;
+  width: 90%;
+  text-align: center;
+  color: white;
+  position: relative;
+  box-shadow:
+    0 0 20px rgba(255,111,165,0.6),
+    0 0 40px rgba(231,125,216,0.5),
+    0 0 60px rgba(255,111,165,0.4);
+  animation: popUp 0.35s ease forwards;
+}
+
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 💥 HEART BURST */
+.burst-heart {
+  position: absolute;
+  font-size: 20px;
+  animation: burst 0.8s ease-out forwards;
+}
+
+@keyframes burst {
+  from { transform: translate(0,0) scale(1); opacity:1; }
+  to { transform: translate(var(--x), var(--y)) scale(1.8); opacity:0; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<div class="container">
+  <section class="hero">
+    <p class="tag">For my forever person</p>
+    <h1>My Dearest Janhavi ❤️</h1>
+    <p style="color: #baa8e9;">Every mile between us is just another reason to love you more.</p>
+    <p style="color: #78a6e3;">I love you endlessly 💕</p>
+  </section>
+
+  <section class="gallery">
+    <h2>Our Beautiful Memories 💕</h2>
+    <p class="helper-text">💌 Click any memory to see a caring note.</p>
+    <div class="gallery-grid">
+      <button class="memory-card" data-note="Every time I see this photo, I feel safe in your love.">
+        <img src="./audio/Snapchat-1469785244.jpg">
+      </button>
+      <button class="memory-card" data-note="Your smile turns every ordinary day into magic.">
+        <img src="./audio/Snapchat-1001348314.jpg">
+      </button>
+      <button class="memory-card" data-note="Distance means nothing when someone means everything.">
+        <img src="./audio/Screenshot_2026-01-21-14-42-55-18_a63b0f8076346d26cbdc1b971a1da2a7.jpg">
+      </button>
+      <button class="memory-card" data-note="I can’t wait to hold you again. ❤️">
+        <img src="./audio/1769513360736.jpg">
+      </button>
+    </div>
+  </section>
+
+  <section class="letter">
+    <h2>A Letter From Vishal 💌</h2>
+    <p style="color: rgb(213, 64, 134);">My Dearest Janhavi (Bandi 👧🏻)🫶🏻💕,</p>
+    <p>
+        Every day, I fall for you a little more 💗,
+        I still remember 23rd January like it was yesterday — the first time I saw you in front of
+        me, not just on a screen. That moment felt magical. All the distance and waiting suddenly
+        felt worth it. With you, everything feels perfect 🥰
+    </p>
+    <p>
+        I’m really sorry that we couldn’t celebrate Valentine’s week together this time. It hurts a
+        little knowing we’re apart right now. But I promise we’ll celebrate our own beautiful
+        Valentine’s Day when we meet once again — together, with double the love, double the hugs, and
+        double the happiness. 😘
+    </p>
+    <p>
+         I’m counting every single day until I see you again. Distance is hard, but loving you is the
+        easiest thing I’ve ever done. No matter how many miles are between us, my heart will always
+        choose you.
+    </p>
+    <p>I love you more than words can explain 💕</p>
+    <p>Yours Forever 🫶🏻</p>
+    <p style="color: rgb(242, 142, 189);font-weight: bold;font-size: 1.2rem; font-family: cursive;">Vishal 🤞🏻</p>
+  </section>
+</div>
+<section>
+    <h3 id="note-title" style="text-align: center;color: rgb(255, 0, 0);">Just for you 💖</h3>
+</section>
+
+<audio id="bg-song" autoplay loop>
+  <source src="./audio/Preet Re Dhadak 2 128 Kbps.mp3" type="audio/mpeg">
+</audio>
+
+<!-- NOTE MODAL -->
+<div class="note-modal" id="noteModal">
+  <div class="note-card">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <h3>Just For You 💖</h3>
+    <p id="noteText"></p>
+  </div>
+</div>
+
+<script>
+
+/* ---------- IMAGE CLICK ---------- */
+const cards = document.querySelectorAll('.memory-card');
+const modal = document.getElementById('noteModal');
+const noteText = document.getElementById('noteText');
+const closeBtn = document.getElementById('closeBtn');
+
+cards.forEach(card=>{
+  card.addEventListener('click',()=>{
+    noteText.textContent = card.dataset.note;
+    modal.classList.add('show');
+    heartBurst();
+  });
+});
+
+closeBtn.onclick = ()=> modal.classList.remove('show');
+modal.onclick = e => { if(e.target===modal) modal.classList.remove('show'); };
+
+/* ---------- FLOATING HEARTS ---------- */
+const heartsContainer = document.querySelector('.hearts');
+function createHeart(){
+  const heart=document.createElement('div');
+  heart.className='heart';
+  heart.innerHTML='❤';
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(15+Math.random()*25)+"px";
+  heart.style.animationDuration=(5+Math.random()*5)+"s";
+  heartsContainer.appendChild(heart);
+  setTimeout(()=>heart.remove(),10000);
+}
+setInterval(createHeart,400);
+
+/* ---------- 💥 HEART BURST ---------- */
+function heartBurst(){
+  const card=document.querySelector('.note-card');
+  for(let i=0;i<12;i++){
+    const h=document.createElement('div');
+    h.className='burst-heart';
+    h.innerHTML='❤';
+    const angle=Math.random()*2*Math.PI;
+    const radius=80+Math.random()*40;
+    h.style.setProperty('--x',Math.cos(angle)*radius+'px');
+    h.style.setProperty('--y',Math.sin(angle)*radius+'px');
+    card.appendChild(h);
+    setTimeout(()=>h.remove(),800);
+  }
+}
+
+/* ---------- MUSIC FIX ---------- */
+const music=document.getElementById("bg-song");
+document.addEventListener("click",()=>music.play(),{once:true});
+
+</script>
+
+</body>
+</html>
